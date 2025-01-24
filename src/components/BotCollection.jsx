@@ -4,7 +4,7 @@ export default function BotCollection({onAddBot}) {
 const [bots, setBots] = useState([])
 
     useEffect(() => {
-        fetch('../../public/db.json')
+        fetch('/db.json')
         .then(res => res.json())
         .then(data => setBots(data.bots))
     }, [])
